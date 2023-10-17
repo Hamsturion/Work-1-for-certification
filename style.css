@@ -1,0 +1,533 @@
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/*
+
+Testet on Microsoft Edge
+Verze 118.0.2088.46 (official) (64bit)
+
+Google Chrome
+Verze 118.0.5993.71 official (64bit)
+
+Firefox
+118.0.2 (64 bit)
+
+*/
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* Originally all styles was made for mobile
+In the end you can finde some @media
+to stylize responsiv for PC */
+
+/* START OF GLOBAL VARIABLES */
+:root {
+  --sixtynineparty: calc(69vw + 69vw);
+  --lite-bg: #fff;
+  --lite-text: #fff;
+  --dark-text: #000;
+  --dark-bg-nav: #33292a;
+  --our-trips-bg: #f2f2f2;
+  --contct-us-bg: #644b4f;
+  --contct-us-btn: #f2f2f2;
+  --contct-us-btn-hover: #5b5fc7;
+  --contct-us-btn-text: #252424;
+  --contct-us-btn-text-hover: #5b5fc7;
+  --link-footer: #efa69d;
+  --link-footer-hover: #e9877b;
+  --footer-bg: #333;
+  --pc-width: 856px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("fonts/Roboto-Medium.ttf");
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  padding: 0px 0px 35px 0px;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+main {
+  /* just in case something happens:) */
+}
+/* END OF GLOBAL VARIABLES */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* START navigation background */
+nav {
+  position: relative;
+  width: 100%;
+  background-color: var(--dark-bg-nav);
+}
+/* END navigation background */
+/* START hamburger ico with animation just for mobile */
+.nav-wrap {
+  margin: 0 auto;
+  max-width: 856px;
+  display: flex;
+  align-items: center;
+  height: 66px;
+}
+
+.wrap-menu-humburger {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  padding: 8px;
+  right: 35px;
+  cursor: pointer;
+}
+
+.menu-humburger:nth-child(1),
+.menu-humburger:nth-child(2),
+.menu-humburger:nth-child(3) {
+  margin: auto;
+  border-radius: 50vh;
+  width: 90%;
+  height: 15%;
+  background-color: var(--lite-bg);
+  transition: rotate 0.5s ease-out;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.wrap-menu-humburger:hover {
+  .menu-humburger:nth-child(1) {
+    position: absolute;
+    margin: auto;
+    border-radius: 50vh;
+    background-color: var(--lite-bg);
+    transform-origin: center center;
+    rotate: -45deg;
+  }
+  .menu-humburger:nth-child(3) {
+    position: absolute;
+    margin: auto;
+    border-radius: 50vh;
+    background-color: var(--lite-bg);
+    transform-origin: center center;
+    rotate: 45deg;
+  }
+  .menu-humburger:nth-child(2) {
+    display: none;
+  }
+}
+/* END hamburger ico with animation just for mobile */
+/* START text menu just for pc */
+.wrap-menu-text {
+  width: 100%;
+  display: none;
+  cursor: pointer;
+}
+
+.wrap-menu-text ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: var(--lite-text);
+  font-weight: bold;
+  width: 100%;
+}
+
+.wrap-menu-text li:hover {
+  filter: invert(100%);
+}
+/* END text menu just for pc */
+/* START of logo with background */
+.logo {
+  word-spacing: var(--sixtynineparty);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 780px;
+  background-image: url(images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+}
+
+.logo-wrap {
+  position: relative;
+  max-width: var(--pc-width);
+  height: 100%;
+  margin: 0 auto;
+}
+
+.logo-wrap h1 {
+  position: absolute;
+  text-align: right;
+  right: 35px;
+  bottom: 35px;
+  line-height: 3rem;
+  color: var(--lite-text);
+}
+/* END of logo with background */
+/* START About Us content */
+.about-us {
+  max-width: var(--pc-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  padding: 35px 35px 35px 35px;
+  background-color: var(--lite-bg);
+}
+
+.about-us-p1 {
+  width: 100%;
+}
+
+.about-us-p2 {
+  margin-top: 35px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(images/anneliese-phillips-uv4-vl3liKM-unsplash.jpg);
+  aspect-ratio: 6 / 4;
+}
+/* END About Us content */
+/* START What We Do */
+.what-we-do-wrap {
+  max-width: var(--pc-width);
+  margin: 0 auto;
+  padding: 50px 35px 50px 35px;
+}
+
+.what-we-do {
+  margin-top: 60px;
+  margin: 0 auto;
+
+  background-color: var(--dark-bg-nav);
+  color: var(--lite-text);
+  text-align: center;
+}
+
+.what-we-do-icons {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.what-we-do-icons li {
+  padding: 35px 0px 0px 0px;
+  margin: 0 auto;
+  transition: 0.5s;
+  display: block;
+}
+
+.what-we-do-icons img {
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  filter: invert(100%);
+}
+
+.what-we-do-icons > li > a {
+  margin: 0 auto;
+  color: var(--lite-text);
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  width: 100px;
+}
+
+.what-we-do-icons > li > a:hover {
+  filter: invert(100%);
+  transition: 0.5s;
+}
+
+.what-we-do-icons > li > a > p {
+  padding-top: 12px;
+  font-size: 1.5rem;
+}
+/* END What We Do */
+/* START Our Trips (4+4 images) */
+.our-trips-wrap {
+  margin: 0 auto;
+  max-width: var(--pc-width);
+  flex-direction: column;
+  display: flex;
+  padding: 35px 35px 35px 35px;
+  background-color: var(--lite-bg);
+}
+
+.our-trips-item {
+  padding: 4px;
+}
+
+.our-trips-item-radius img,
+.our-trips-item-radius p {
+  border-radius: 5px;
+}
+
+.our-trips-item-no-radius img,
+.our-trips-item-no-radius p {
+  border-radius: none;
+}
+
+.our-trips-item p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 80px;
+  background-color: var(--our-trips-bg);
+  font-weight: bold;
+  text-align: center;
+}
+
+.our-trips-item img {
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 6 / 4;
+  width: 100%;
+}
+/* END Our Trips (4+4 images) */
+/* START Where do you want to go (contct us) */
+.contct-us {
+  background-color: var(--contct-us-bg);
+  color: var(--lite-text);
+}
+
+.contct-us-wrap {
+  max-width: var(--pc-width);
+  padding: 50px 35px 50px 35px;
+  margin: 0 auto;
+  max-width: var(--pc-width);
+}
+
+.contct-us p {
+  margin: 0 0 35px 0;
+}
+
+.contct-us-btn {
+  padding: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+  color: var(--contct-us-btn-text);
+  font-weight: bold;
+  background-color: var(--contct-us-btn);
+  border-radius: 4px;
+  text-transform: uppercase;
+  width: 133px;
+  height: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.contct-us-btn:hover {
+  background-color: var(--contct-us-btn-hover);
+  color: var(--lite-text);
+  transition: 0.5s;
+}
+/* END Where do you want to go (contct us) */
+/* START Reviews */
+.reviews {
+  background-color: var(--lite-bg);
+  color: var(--dark-text);
+}
+
+.reviews-wrap {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 856px;
+  padding: 50px 35px 50px 35px;
+}
+
+.reviews img {
+  margin: 70px 0 20px 0;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 111px;
+  height: 111px;
+  border-radius: 50%;
+}
+
+.reviews span {
+  padding-top: 20px;
+  display: block;
+  font-weight: bold;
+}
+/* END Reviews */
+/* START 4 photos in the end */
+.just-photos {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+.just-photos img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 6 / 4;
+  vertical-align: middle;
+}
+/* END 4 photos in the end */
+/* START FOOTER */
+footer {
+  line-height: 94px;
+  height: 94px;
+  text-align: center;
+  color: var(--lite-text);
+  background-color: var(--footer-bg);
+}
+
+footer h6 {
+  line-height: 2;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+footer a {
+  display: block;
+  color: var(--link-footer);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+footer a:hover {
+  color: var(--link-footer-hover);
+}
+/* END FOOTER */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+/* START PC VERSION  */
+@media only screen and (min-width: 768px) {
+  nav .wrap-menu-humburger {
+    display: none;
+  }
+
+  .wrap-menu-text {
+    display: unset;
+  }
+
+  .about-us {
+    flex-direction: row;
+  }
+
+  .about-us-p1 {
+    flex-grow: 2;
+    width: 40%;
+    margin-right: 35px;
+  }
+
+  .about-us-p2 {
+    margin-top: 0;
+    width: 60%;
+    aspect-ratio: 5 / 3;
+  }
+
+  .what-we-do-icons {
+    flex-direction: row;
+  }
+
+  .our-trips-wrap {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .our-trips-item {
+    width: 33%;
+  }
+
+  .our-trips-item p {
+    height: 100%;
+  }
+
+  .our-trips-item-no-radius img {
+    border-radius: 5px;
+  }
+
+  .contct-us-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contct-us-p1 {
+    width: 30%;
+    flex-grow: 2;
+  }
+
+  .contct-us-p2 {
+    width: 70%;
+  }
+
+  .reviews-wrap {
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+      "first first"
+      /* ꨄin my heartꨄ */
+      "second third";
+  }
+
+  .reviews-content:nth-child(1) {
+    width: 332px;
+    margin: auto;
+  }
+
+  .reviews-content:nth-child(2),
+  .reviews-content:nth-child(3) {
+    width: 100%;
+    margin: auto;
+  }
+
+  .reviews-content:nth-child(1) {
+    grid-area: first;
+  }
+  .reviews-content:nth-child(2) {
+    grid-area: second;
+  }
+  .reviews-content:nth-child(3) {
+    grid-area: third;
+  }
+
+  .just-photos img {
+    width: 50%;
+  }
+
+  footer {
+    line-height: 114px;
+    height: 114px;
+  }
+}
+/* END PC VERSION  */
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
