@@ -88,7 +88,7 @@ nav {
 /* START hamburger ico with animation just for mobile */
 .nav-wrap {
   margin: 0 auto;
-  max-width: 856px;
+  max-width: var(--pc-width);
   display: flex;
   align-items: center;
   height: 66px;
