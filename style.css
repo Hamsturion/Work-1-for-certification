@@ -12,6 +12,7 @@ Firefox
 
 */
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
 /* Originally all styles was made for mobile
 In the end you can finde some @media
 to stylize responsiv for PC */
@@ -73,11 +74,13 @@ main {
   /* just in case something happens:) */
 }
 /* END OF GLOBAL VARIABLES */
+
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
 /* START navigation background */
 nav {
   position: relative;
@@ -85,6 +88,7 @@ nav {
   background-color: var(--dark-bg-nav);
 }
 /* END navigation background */
+
 /* START hamburger ico with animation just for mobile */
 .nav-wrap {
   margin: 0 auto;
@@ -169,7 +173,6 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   height: 780px;
   background-image: url(images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
 }
@@ -190,6 +193,7 @@ nav {
   color: var(--lite-text);
 }
 /* END of logo with background */
+
 /* START About Us content */
 .about-us {
   max-width: var(--pc-width);
@@ -215,6 +219,7 @@ nav {
   aspect-ratio: 6 / 4;
 }
 /* END About Us content */
+
 /* START What We Do */
 .what-we-do-wrap {
   max-width: var(--pc-width);
@@ -225,7 +230,6 @@ nav {
 .what-we-do {
   margin-top: 60px;
   margin: 0 auto;
-
   background-color: var(--dark-bg-nav);
   color: var(--lite-text);
   text-align: center;
@@ -270,6 +274,7 @@ nav {
   font-size: 1.5rem;
 }
 /* END What We Do */
+
 /* START Our Trips (4+4 images) */
 .our-trips-wrap {
   margin: 0 auto;
@@ -313,6 +318,7 @@ nav {
   width: 100%;
 }
 /* END Our Trips (4+4 images) */
+
 /* START Where do you want to go (contct us) */
 .contct-us {
   background-color: var(--contct-us-bg);
@@ -353,6 +359,7 @@ nav {
   transition: 0.5s;
 }
 /* END Where do you want to go (contct us) */
+
 /* START Reviews */
 .reviews {
   background-color: var(--lite-bg);
@@ -362,7 +369,7 @@ nav {
 .reviews-wrap {
   margin: 0 auto;
   text-align: center;
-  max-width: 856px;
+  max-width: var(--pc-width);
   padding: 50px 35px 50px 35px;
 }
 
@@ -381,6 +388,7 @@ nav {
   font-weight: bold;
 }
 /* END Reviews */
+
 /* START 4 photos in the end */
 .just-photos {
   flex-wrap: wrap;
@@ -396,6 +404,7 @@ nav {
   vertical-align: middle;
 }
 /* END 4 photos in the end */
+
 /* START FOOTER */
 footer {
   line-height: 94px;
@@ -423,11 +432,13 @@ footer a:hover {
   color: var(--link-footer-hover);
 }
 /* END FOOTER */
+
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
 /* START PC VERSION  */
 @media only screen and (min-width: 768px) {
   nav .wrap-menu-humburger {
@@ -513,9 +524,11 @@ footer a:hover {
   .reviews-content:nth-child(1) {
     grid-area: first;
   }
+  
   .reviews-content:nth-child(2) {
     grid-area: second;
   }
+  
   .reviews-content:nth-child(3) {
     grid-area: third;
   }
@@ -530,4 +543,5 @@ footer a:hover {
   }
 }
 /* END PC VERSION  */
+
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
