@@ -63,11 +63,16 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  padding: 0px 0px 35px 0px;
+  padding: 0px 0px 30px 0px;
 }
 
 h6 {
   font-size: 0.8rem;
+}
+
+.padding-articles {
+  padding: 50px 35px 50px 35px;
+  margin: 0 auto;
 }
 
 main {
@@ -195,19 +200,17 @@ nav {
 /* END of logo with background */
 
 /* START About Us content */
-.about-us {
+.about-us-wrap {
   max-width: var(--pc-width);
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-content: center;
   flex-direction: column;
-  padding: 35px 35px 35px 35px;
   background-color: var(--lite-bg);
 }
 
 .about-us-p1 {
-  width: 100%;
+  /* width: 100%; */
 }
 
 .about-us-p2 {
@@ -216,23 +219,31 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(images/anneliese-phillips-uv4-vl3liKM-unsplash.jpg);
-  aspect-ratio: 6 / 4;
+  aspect-ratio: 5 / 3;
 }
 /* END About Us content */
 
 /* START What We Do */
-.what-we-do-wrap {
-  max-width: var(--pc-width);
-  margin: 0 auto;
-  padding: 50px 35px 50px 35px;
-}
 
 .what-we-do {
-  margin-top: 60px;
-  margin: 0 auto;
   background-color: var(--dark-bg-nav);
   color: var(--lite-text);
   text-align: center;
+}
+
+.what-we-do-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--pc-width);
+  margin: auto;
+}
+
+.what-we-do-wrap .text {
+  padding-bottom: 35px;
+}
+
+.what-we-do-wrap .icons {
+  padding-bottom: 35px;
 }
 
 .what-we-do-icons {
@@ -242,17 +253,7 @@ nav {
 }
 
 .what-we-do-icons li {
-  padding: 35px 0px 0px 0px;
   margin: 0 auto;
-  transition: 0.5s;
-  display: block;
-}
-
-.what-we-do-icons img {
-  margin: 0 auto;
-  width: 80px;
-  height: 80px;
-  filter: invert(100%);
 }
 
 .what-we-do-icons > li > a {
@@ -260,8 +261,7 @@ nav {
   color: var(--lite-text);
   text-decoration: none;
   font-weight: bold;
-  display: block;
-  width: 100px;
+  transition: 0.5s;
 }
 
 .what-we-do-icons > li > a:hover {
@@ -273,15 +273,19 @@ nav {
   padding-top: 12px;
   font-size: 1.5rem;
 }
+
+.what-we-do-icons img {
+  width: 80px;
+  height: 80px;
+  filter: invert(100%);
+}
 /* END What We Do */
 
 /* START Our Trips (4+4 images) */
 .our-trips-wrap {
-  margin: 0 auto;
   max-width: var(--pc-width);
   flex-direction: column;
   display: flex;
-  padding: 35px 35px 35px 35px;
   background-color: var(--lite-bg);
 }
 
@@ -327,8 +331,6 @@ nav {
 
 .contct-us-wrap {
   max-width: var(--pc-width);
-  padding: 50px 35px 50px 35px;
-  margin: 0 auto;
   max-width: var(--pc-width);
 }
 
@@ -367,10 +369,8 @@ nav {
 }
 
 .reviews-wrap {
-  margin: 0 auto;
   text-align: center;
   max-width: var(--pc-width);
-  padding: 50px 35px 50px 35px;
 }
 
 .reviews img {
@@ -394,7 +394,6 @@ nav {
   flex-wrap: wrap;
   display: flex;
   flex-direction: column;
-  flex-direction: row;
 }
 
 .just-photos img {
@@ -449,20 +448,18 @@ footer a:hover {
     display: unset;
   }
 
-  .about-us {
+  .about-us-wrap {
     flex-direction: row;
   }
 
   .about-us-p1 {
-    flex-grow: 2;
-    width: 40%;
+    width: 45%;
     margin-right: 35px;
   }
 
   .about-us-p2 {
     margin-top: 0;
-    width: 60%;
-    aspect-ratio: 5 / 3;
+    width: 55%;
   }
 
   .what-we-do-icons {
@@ -524,13 +521,17 @@ footer a:hover {
   .reviews-content:nth-child(1) {
     grid-area: first;
   }
-  
+
   .reviews-content:nth-child(2) {
     grid-area: second;
   }
-  
+
   .reviews-content:nth-child(3) {
     grid-area: third;
+  }
+
+  .just-photos {
+    flex-direction: row;
   }
 
   .just-photos img {
