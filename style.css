@@ -59,6 +59,7 @@ to stylize responsiv for PC */
 h1 {
   text-transform: capitalize;
   font-size: 2.5rem;
+  line-height: 3rem;
 }
 
 h2 {
@@ -118,7 +119,7 @@ nav {
 .menu-humburger:nth-child(2),
 .menu-humburger:nth-child(3) {
   margin: auto;
-  border-radius: 50vh;
+  border-radius: 100px;
   width: 90%;
   height: 15%;
   background-color: var(--lite-bg);
@@ -194,7 +195,6 @@ nav {
   text-align: right;
   right: 35px;
   bottom: 35px;
-  line-height: 3rem;
   color: var(--lite-text);
 }
 /* END of logo with background */
@@ -446,6 +446,15 @@ footer a:hover {
 
   .wrap-menu-text {
     display: unset;
+  }
+
+  .logo {
+    max-height: 650px;
+  }
+
+  .logo h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
   }
 
   .about-us-wrap {
