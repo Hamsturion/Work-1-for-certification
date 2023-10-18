@@ -19,7 +19,6 @@ to stylize responsiv for PC */
 
 /* START OF GLOBAL VARIABLES */
 :root {
-  --sixtynineparty: calc(69vw + 69vw);
   --lite-bg: #fff;
   --lite-text: #fff;
   --dark-text: #000;
@@ -34,6 +33,7 @@ to stylize responsiv for PC */
   --link-footer-hover: #e9877b;
   --footer-bg: #333;
   --pc-width: 856px;
+  --h1-big-space: calc(69vw + 69vw);
 }
 
 * {
@@ -134,7 +134,7 @@ nav {
   .menu-humburger:nth-child(1) {
     position: absolute;
     margin: auto;
-    border-radius: 50vh;
+    border-radius: 100px;
     background-color: var(--lite-bg);
     transform-origin: center center;
     rotate: -45deg;
@@ -142,7 +142,7 @@ nav {
   .menu-humburger:nth-child(3) {
     position: absolute;
     margin: auto;
-    border-radius: 50vh;
+    border-radius: 100px;
     background-color: var(--lite-bg);
     transform-origin: center center;
     rotate: 45deg;
@@ -175,7 +175,7 @@ nav {
 /* END text menu just for pc */
 /* START of logo with background */
 .logo {
-  word-spacing: var(--sixtynineparty);
+  word-spacing: var(--h1-big-space);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -235,15 +235,15 @@ nav {
   display: flex;
   flex-direction: column;
   max-width: var(--pc-width);
-  margin: auto;
 }
 
-.what-we-do-wrap .text {
-  padding-bottom: 35px;
+.what-we-do-wrap > .text {
+  padding-bottom: none;
+  text-align: justify;
 }
 
 .what-we-do-wrap .icons {
-  padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .what-we-do-icons {
@@ -290,25 +290,16 @@ nav {
 }
 
 .our-trips-item {
-  padding: 4px;
-}
-
-.our-trips-item-radius img,
-.our-trips-item-radius p {
-  border-radius: 5px;
-}
-
-.our-trips-item-no-radius img,
-.our-trips-item-no-radius p {
-  border-radius: none;
+  display: flex;
+  padding: 4px 0 4px 0;
 }
 
 .our-trips-item p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: 100%;
   font-size: 1.5rem;
-  width: 100%;
   height: 80px;
   background-color: var(--our-trips-bg);
   font-weight: bold;
@@ -316,10 +307,19 @@ nav {
 }
 
 .our-trips-item img {
-  display: block;
   object-fit: cover;
   aspect-ratio: 6 / 4;
   width: 100%;
+}
+
+.radius img,
+.radius p {
+  border-radius: 5px;
+}
+
+.radius-on-off img,
+.radius-on-off p {
+  border-radius: none;
 }
 /* END Our Trips (4+4 images) */
 
@@ -462,17 +462,25 @@ footer a:hover {
   }
 
   .about-us-p1 {
-    width: 45%;
+    width: 40%;
     margin-right: 35px;
   }
 
   .about-us-p2 {
+    width: 60%;
     margin-top: 0;
-    width: 55%;
   }
 
   .what-we-do-icons {
     flex-direction: row;
+  }
+
+  .what-we-do-wrap .text {
+    text-align: center;
+  }
+
+  .what-we-do-wrap .icons {
+    padding-top: 35px;
   }
 
   .our-trips-wrap {
@@ -484,11 +492,17 @@ footer a:hover {
     width: 33%;
   }
 
+  .our-trips-item .radius p,
+  .our-trips-item .radius img {
+    border-radius: 5px;
+  }
+
   .our-trips-item p {
     height: 100%;
   }
 
-  .our-trips-item-no-radius img {
+  .radius-on-off img,
+  .radius-on-off p {
     border-radius: 5px;
   }
 
