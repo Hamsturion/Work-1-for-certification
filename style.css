@@ -33,7 +33,7 @@ to stylize responsiv for PC */
   --link-footer-hover: #e9877b;
   --footer-bg: #333;
   --pc-width: 856px;
-  --h1-big-space: calc(69vw + 69vw);
+  --h1-big-space: calc(123456vw);
 }
 
 * {
@@ -152,7 +152,8 @@ nav {
   }
 }
 /* END hamburger ico with animation just for mobile */
-/* START text menu just for pc */
+
+/* START text menu just for pc hided for mobile*/
 .wrap-menu-text {
   width: 100%;
   display: none;
@@ -172,7 +173,8 @@ nav {
 .wrap-menu-text li:hover {
   filter: invert(100%);
 }
-/* END text menu just for pc */
+/* END text menu just for pc hided for mobile*/
+
 /* START of logo with background */
 .logo {
   word-spacing: var(--h1-big-space);
@@ -207,10 +209,6 @@ nav {
   align-content: center;
   flex-direction: column;
   background-color: var(--lite-bg);
-}
-
-.about-us-p1 {
-  /* width: 100%; */
 }
 
 .about-us-p2 {
@@ -439,15 +437,21 @@ footer a:hover {
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
 /* START PC VERSION  */
+
+/* START hide hamburger*/
 @media only screen and (min-width: 768px) {
   nav .wrap-menu-humburger {
     display: none;
   }
+  /* END hide hamburger*/
 
+  /* START text menu unhide */
   .wrap-menu-text {
     display: unset;
   }
+  /* END text menu unhide */
 
+  /* START of logo with background*/
   .logo {
     max-height: 650px;
   }
@@ -456,7 +460,9 @@ footer a:hover {
     font-size: 4rem;
     line-height: 4.5rem;
   }
+  /* END of logo with background*/
 
+  /* START About Us content */
   .about-us-wrap {
     flex-direction: row;
   }
@@ -470,7 +476,9 @@ footer a:hover {
     width: 60%;
     margin-top: 0;
   }
+  /* END About Us content */
 
+  /* START What We Do */
   .what-we-do-icons {
     flex-direction: row;
   }
@@ -482,7 +490,9 @@ footer a:hover {
   .what-we-do-wrap .icons {
     padding-top: 35px;
   }
+  /* END What We Do */
 
+  /* START Our Trips (4+4 images) */
   .our-trips-wrap {
     flex-wrap: wrap;
     flex-direction: row;
@@ -505,7 +515,9 @@ footer a:hover {
   .radius-on-off p {
     border-radius: 5px;
   }
+  /* END Our Trips (4+4 images) */
 
+  /* START Where do you want to go (contct us) */
   .contct-us-wrap {
     display: flex;
     flex-direction: row;
@@ -514,19 +526,19 @@ footer a:hover {
 
   .contct-us-p1 {
     width: 30%;
-    flex-grow: 2;
   }
 
   .contct-us-p2 {
     width: 70%;
   }
+  /* END Where do you want to go (contct us) */
 
+  /* START Reviews */
   .reviews-wrap {
     display: grid;
     gap: 50px;
     grid-template-areas:
       "first first"
-      /* ꨄin my heartꨄ */
       "second third";
   }
 
@@ -552,7 +564,9 @@ footer a:hover {
   .reviews-content:nth-child(3) {
     grid-area: third;
   }
+  /* END Reviews */
 
+  /* START 4 photos in the end */
   .just-photos {
     flex-direction: row;
   }
@@ -560,12 +574,15 @@ footer a:hover {
   .just-photos img {
     width: 50%;
   }
+  /* END 4 photos in the end */
 
+  /* START FOOTER */
   footer {
     line-height: 114px;
     height: 114px;
   }
 }
+/* END FOOTER */
 /* END PC VERSION  */
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
