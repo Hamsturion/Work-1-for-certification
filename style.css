@@ -33,7 +33,7 @@ to stylize responsiv for PC */
   --link-footer-hover: #e9877b;
   --footer-bg: #333;
   --pc-width: 856px;
-  --h1-big-space: calc(123456vw);
+  --h1-big-space: 123456vw;
 }
 
 * {
@@ -181,7 +181,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 780px;
+  height: calc(100vh - 66px);
   background-image: url(images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
 }
 
@@ -231,8 +231,10 @@ nav {
 
 .what-we-do-wrap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   max-width: var(--pc-width);
+  gap: 35px;
 }
 
 .what-we-do-wrap > .text {
@@ -240,14 +242,11 @@ nav {
   text-align: justify;
 }
 
-.what-we-do-wrap .icons {
-  padding-top: 35px;
-}
-
 .what-we-do-icons {
   display: flex;
   flex-direction: column;
   list-style: none;
+  gap: 20px;
 }
 
 .what-we-do-icons li {
@@ -284,12 +283,13 @@ nav {
   max-width: var(--pc-width);
   flex-direction: column;
   display: flex;
+  gap: 4px;
   background-color: var(--lite-bg);
 }
 
 .our-trips-item {
   display: flex;
-  padding: 4px 0 4px 0;
+  /* padding: 4px 0 4px 0; */
 }
 
 .our-trips-item p {
@@ -453,7 +453,7 @@ footer a:hover {
 
   /* START of logo with background*/
   .logo {
-    max-height: 650px;
+    max-height: calc(40vh - 66px);
   }
 
   .logo h1 {
@@ -486,10 +486,6 @@ footer a:hover {
   .what-we-do-wrap .text {
     text-align: center;
   }
-
-  .what-we-do-wrap .icons {
-    padding-top: 35px;
-  }
   /* END What We Do */
 
   /* START Our Trips (4+4 images) */
@@ -499,7 +495,7 @@ footer a:hover {
   }
 
   .our-trips-item {
-    width: 33%;
+    width: 32.9%;
   }
 
   .our-trips-item .radius p,
